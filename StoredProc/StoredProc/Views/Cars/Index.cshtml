@@ -1,0 +1,59 @@
+﻿@{
+}
+
+@{ }
+
+<body style="padding-top: 10px">
+    <div class="col-xs-8 col-xs-offset-2">
+        <div class="panel-heading">
+            <h3>Cars Search Form</h3>
+        </div>
+        <form asp-controller="Cars" asp-action="Index">
+            <div>
+                <label for="carManufacturer">Car Manufacturer</label>
+                <br />
+                <input type="text" name="carManufacturer" placeholder="Ford, Honda, etc" />
+            </div>
+            <br />
+            <div>
+                <label for="carModel">Car Model</label>
+                <br />
+                <input type="text" name="carModel" placeholder="Mustang, Focus, etc" />
+            </div>
+            <br />
+            <div>
+                <label for="carModelYear">carModelYear</label>
+                <br />
+                <input type="number" name="carModelYear" min="1900" max="2021" step="1" />
+            </div>
+            <br />
+            <div>
+                <label for="carColor">Car Color</label>
+                <br />
+                <input type="text" name="carColor" placeholder="Red, Green, Blue, Aquamarine, etc" />
+            </div>
+            <br />
+            <input type="submit" value="Filter" />
+        </form>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Car Manufacturer</th>
+                    <th scope="col">Car Model</th>
+                    <th scope="col">Car Model Year</th>
+                    <th scope="col">Car Color</th>
+                </tr>
+            <tbody>
+                @foreach (var car in Model)
+                {
+                <tr>
+                    <td>@car.carManufacturer</td>
+                    <td>@car.carModel</td>
+                    <td>@car.carModelYear</td>
+                    <td>@car.carColor</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>

@@ -1,0 +1,70 @@
+﻿<body style="padding-top: 10px">
+    <div class="col-xs-8 col-xs-offset-2">
+        <form id="form1" runat="server" class="form-horizontal">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3>Employee Search Form</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for="inputFirstname" class="control-label col-xs-2">
+                            Firstname
+                        </label>
+                        <div class="col-xs-10">
+                            <input type="text" runat="server" class="form-control"
+                                   name="inputFirstname" placeholder="Firstname" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputLastname" class="control-label col-xs-2">
+                            Lastname
+                        </label>
+                        <div class="col-xs-10">
+                            <input type="text" runat="server" class="form-control"
+                                   name="inputLastname" placeholder="Lastname" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputGender" class="control-label col-xs-2">
+                            Gender
+                        </label>
+                        <div class="col-xs-10">
+                            <input type="text" runat="server" class="form-control"
+                                   name="inputGender" placeholder="Gender" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputSalary" class="control-label col-xs-2">
+                            Salary
+                        </label>
+                        <div class="col-xs-10">
+                            <input type="number" runat="server" class="form-control"
+                                   id="inputSalary" placeholder="Salary" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-10 col-xs-offset-2">
+                            <<button type="submit" class="btn btn-danger">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3>Search Results</h3>    
+                </div>
+                <div class="panel-body">
+                    <div class="col-xs-10">
+                        <asp:GridView CssClass="table table-bordered"
+                                      ID="gvSearchResults" runat="server">
+                        </asp:GridView>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
